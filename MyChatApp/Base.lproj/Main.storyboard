@@ -159,6 +159,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NVP-dp-Ssj" kind="show" id="0B1-op-292"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tce-cc-PYp"/>
@@ -181,8 +184,72 @@
             </objects>
             <point key="canvasLocation" x="1161" y="-590"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zdU-9v-4Z0">
+            <objects>
+                <viewController id="NVP-dp-Ssj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="93D-yV-UtA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-9S-Snh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUx-uO-w6A">
+                                <rect key="frame" x="0.0" y="664" width="375" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="okg-cz-ris">
+                                        <rect key="frame" x="10" y="10" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4dW-dP-r0T"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-7J-JNI">
+                                        <rect key="frame" x="315" y="0.0" width="50" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="SXl-O1-yrs"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="paperplane.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="okg-cz-ris" secondAttribute="bottom" constant="10" id="2cM-g1-ajk"/>
+                                    <constraint firstItem="okg-cz-ris" firstAttribute="leading" secondItem="nUx-uO-w6A" secondAttribute="leading" constant="10" id="5Ps-Jo-GyP"/>
+                                    <constraint firstItem="uG2-7J-JNI" firstAttribute="top" secondItem="nUx-uO-w6A" secondAttribute="top" id="7jG-4q-hEK"/>
+                                    <constraint firstAttribute="height" constant="60" id="Ghf-KC-Mzj"/>
+                                    <constraint firstAttribute="bottom" secondItem="uG2-7J-JNI" secondAttribute="bottom" id="anP-NL-sU7"/>
+                                    <constraint firstItem="okg-cz-ris" firstAttribute="top" secondItem="nUx-uO-w6A" secondAttribute="top" constant="10" id="da0-fR-fVF"/>
+                                    <constraint firstItem="uG2-7J-JNI" firstAttribute="leading" secondItem="okg-cz-ris" secondAttribute="trailing" constant="10" id="kl3-eg-na0"/>
+                                    <constraint firstAttribute="trailing" secondItem="uG2-7J-JNI" secondAttribute="trailing" constant="10" id="rso-oV-b4f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="34D-c4-Wmu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="34D-c4-Wmu" firstAttribute="trailing" secondItem="nUx-uO-w6A" secondAttribute="trailing" id="10C-oI-0i1"/>
+                            <constraint firstItem="GAZ-9S-Snh" firstAttribute="top" secondItem="34D-c4-Wmu" secondAttribute="top" id="7zP-7X-E6P"/>
+                            <constraint firstItem="GAZ-9S-Snh" firstAttribute="leading" secondItem="34D-c4-Wmu" secondAttribute="leading" id="Dvy-lc-wMe"/>
+                            <constraint firstItem="34D-c4-Wmu" firstAttribute="bottom" secondItem="nUx-uO-w6A" secondAttribute="bottom" id="Idi-Ma-fCH"/>
+                            <constraint firstItem="34D-c4-Wmu" firstAttribute="trailing" secondItem="GAZ-9S-Snh" secondAttribute="trailing" id="TR4-AS-9AV"/>
+                            <constraint firstItem="nUx-uO-w6A" firstAttribute="leading" secondItem="34D-c4-Wmu" secondAttribute="leading" id="UCz-Ui-xvM"/>
+                            <constraint firstItem="nUx-uO-w6A" firstAttribute="top" secondItem="GAZ-9S-Snh" secondAttribute="bottom" id="wsK-YN-wcZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZK5-u0-Hvj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tq8-qD-I0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2597.5999999999999" y="103.44827586206897"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="textfield" width="298" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
