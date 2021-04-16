@@ -1,13 +1,14 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+
+platform :ios, '12.0'
 
 target 'MyChatApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
+  
     
   use_frameworks!
-        pod 'FirebaseFirestore'
+        
   # Pods for MyChatApp
-	
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'MyChatAppTests' do
     inherit! :search_paths

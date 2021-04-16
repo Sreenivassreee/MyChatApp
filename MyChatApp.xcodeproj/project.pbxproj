@@ -21,6 +21,9 @@
 		F417D87026294C070065338B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D86F26294C070065338B /* RegisterViewController.swift */; };
 		F417D87526294C190065338B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D87426294C190065338B /* LoginViewController.swift */; };
 		F417D87A26294C3D0065338B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417D87926294C3D0065338B /* ChatViewController.swift */; };
+		F460E6422629631300960A06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F460E6412629631300960A06 /* GoogleService-Info.plist */; };
+		F460E65D262968CE00960A06 /* fire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E65C262968CE00960A06 /* fire.swift */; };
+		F460E66226298C3D00960A06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460E66126298C3D00960A06 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		F417D86F26294C070065338B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F417D87426294C190065338B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F417D87926294C3D0065338B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F460E6412629631300960A06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F460E65C262968CE00960A06 /* fire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fire.swift; sourceTree = "<group>"; };
+		F460E66126298C3D00960A06 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 				F41584942626035000AD200B /* Assets.xcassets */,
 				F41584962626035000AD200B /* LaunchScreen.storyboard */,
 				F41584992626035000AD200B /* Info.plist */,
+				F460E6412629631300960A06 /* GoogleService-Info.plist */,
 			);
 			path = MyChatApp;
 			sourceTree = "<group>";
@@ -186,6 +193,8 @@
 		F417D86426294BAE0065338B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F460E65C262968CE00960A06 /* fire.swift */,
+				F460E66126298C3D00960A06 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,7 +221,7 @@
 				F41584842626034F00AD200B /* Sources */,
 				F41584852626034F00AD200B /* Frameworks */,
 				F41584862626034F00AD200B /* Resources */,
-				83D702528AB528321F21E097 /* [CP] Embed Pods Frameworks */,
+				4E8A273328C92251A7CD88A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,7 +259,7 @@
 				F41584A52626035100AD200B /* Sources */,
 				F41584A62626035100AD200B /* Frameworks */,
 				F41584A72626035100AD200B /* Resources */,
-				A25FF2EC663062E666A58ADB /* [CP] Embed Pods Frameworks */,
+				14E49484A9235E1C5139141A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41584982626035000AD200B /* LaunchScreen.storyboard in Resources */,
+				F460E6422629631300960A06 /* GoogleService-Info.plist in Resources */,
 				F41584952626035000AD200B /* Assets.xcassets in Resources */,
 				F41584932626034F00AD200B /* Main.storyboard in Resources */,
 			);
@@ -354,6 +364,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		14E49484A9235E1C5139141A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp-MyChatAppUITests/Pods-MyChatApp-MyChatAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp-MyChatAppUITests/Pods-MyChatApp-MyChatAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyChatApp-MyChatAppUITests/Pods-MyChatApp-MyChatAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E8A273328C92251A7CD88A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp/Pods-MyChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp/Pods-MyChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyChatApp/Pods-MyChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		678A347BE6AE93D6414C6DD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,40 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		83D702528AB528321F21E097 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp/Pods-MyChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp/Pods-MyChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyChatApp/Pods-MyChatApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A25FF2EC663062E666A58ADB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp-MyChatAppUITests/Pods-MyChatApp-MyChatAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyChatApp-MyChatAppUITests/Pods-MyChatApp-MyChatAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyChatApp-MyChatAppUITests/Pods-MyChatApp-MyChatAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BBCFC410DB1276C9B82120C8 /* [CP] Check Pods Manifest.lock */ = {
@@ -440,11 +450,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41584902626034F00AD200B /* ViewController.swift in Sources */,
+				F460E65D262968CE00960A06 /* fire.swift in Sources */,
 				F415848C2626034F00AD200B /* AppDelegate.swift in Sources */,
 				F415848E2626034F00AD200B /* SceneDelegate.swift in Sources */,
 				F417D87526294C190065338B /* LoginViewController.swift in Sources */,
 				F417D87A26294C3D0065338B /* ChatViewController.swift in Sources */,
 				F417D87026294C070065338B /* RegisterViewController.swift in Sources */,
+				F460E66226298C3D00960A06 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

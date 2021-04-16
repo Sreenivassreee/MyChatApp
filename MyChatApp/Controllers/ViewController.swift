@@ -12,16 +12,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        Apptitle.text="  MyChatApp"
         Apptitle.text=""
         var chatIndex=0
-        var title="MyChatApp"
+        let title = C.AppName
         for i in title{
             Timer.scheduledTimer(withTimeInterval: 0.15*Double(chatIndex), repeats: false) { (timer) in
                 self.Apptitle.text?.append(i)
             }
-            
+
             chatIndex+=1
-            
+
         }
         
         
