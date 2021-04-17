@@ -13,7 +13,7 @@ class ChatViewController:UIViewController{
     let firebaseAuth = Auth.auth()
     var messages:[Message]=[
         Message(sender: "1@2.com", messagebody: "Hey"),
-        Message(sender: "ab@2.com", messagebody: "Hey Raj")
+        Message(sender: "ab@2.com", messagebody: "Hey Raj,Hey Raj")
         ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +21,8 @@ class ChatViewController:UIViewController{
         navigationItem.hidesBackButton=true
         navigationItem.title=C.AppName
         tableView.dataSource=self
-        tableView.delegate=self
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: C.cellId)
+        
     }
     @IBAction func logoutPresed(_ sender: Any) {
         do {
@@ -39,16 +40,12 @@ extension ChatViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: C.cellId,for: indexPath)
-        cell.textLabel?.text=messages[indexPath.row].messagebody
+        let cell = tableView.dequeueReusableCell(withIdentifier: C.cellId,for: indexPath) as! MessageCell
+        cell.messageLable?.text=messages[indexPath.row].messagebody
         return cell
         
     }
     
     
 }
-extension ChatViewController:UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-    }
-}
+
