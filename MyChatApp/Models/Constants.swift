@@ -9,6 +9,7 @@ import Foundation
 
 struct C {
     static let AppName = "MyChatApp"
+    static let cellId="ReusableCell"
     
     struct Seg {
         static let loginToChat:String = "LoginToChat"
