@@ -10,4 +10,5 @@ import Foundation
 struct Message {
     let sender:String
     let messagebody:String
+    let time:Double
 }

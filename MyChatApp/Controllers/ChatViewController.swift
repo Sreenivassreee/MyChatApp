@@ -11,11 +11,8 @@ import Firebase
 
 class ChatViewController:UIViewController{
     let firebaseAuth = Auth.auth()
-    var messages:[Message]=[
-        Message(sender: "1@2.com", messagebody: "Hey"),
-        Message(sender: "ab@2.com", messagebody: "Hey Raj,Hey Raj")
-        ]
-    
+    var messages:[Message]=[]
+    let db=Firestore.firestore()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         navigationItem.hidesBackButton=true
@@ -26,10 +23,28 @@ class ChatViewController:UIViewController{
     }
     @IBAction func logoutPresed(_ sender: Any) {
         do {
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    @IBOutlet weak var messBody: UITextField!
+ 
+    @IBAction func sendPressed(_ sender: Any) {
+        if let user=firebaseAuth.currentUser?.email,let mess=messBody.text{
+            let timestamp = NSDate().timeIntervalSince1970
+            db.collection(C.firebase.collection).addDocument(data: [C.firebase.messageBody:mess,
+                                                                    C.firebase.messageSender:user,
+                                                                    C.firebase.time:timestamp
+            ]) { (error) in
+                if let e = error{
+                    print(e)
+                }else{
+                    print("Succefully Added")
+                }
+                
+            }
         }
     }
 }

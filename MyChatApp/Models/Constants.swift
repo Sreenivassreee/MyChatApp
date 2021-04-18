@@ -15,5 +15,11 @@ struct C {
         static let loginToChat:String = "LoginToChat"
         static  let RegisterToChat:String = "RegisterToChat"
     }
+    struct firebase {
+        static let collection="Messeges"
+        static let messageBody="MessageBody"
+        static let messageSender="MessageSender"
+        static let time="TimeStamp"
+    }
     
 }

@@ -231,6 +231,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="NVP-dp-Ssj" eventType="touchUpInside" id="7Pz-Xx-kmY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,6 +269,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="messBody" destination="okg-cz-ris" id="eoI-sP-lI6"/>
                         <outlet property="tableView" destination="GAZ-9S-Snh" id="DUR-8X-Ul4"/>
                     </connections>
                 </viewController>
