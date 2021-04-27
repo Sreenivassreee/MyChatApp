@@ -209,12 +209,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-9S-Snh">
-                                <rect key="frame" x="0.0" y="88" width="375" height="630"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-9S-Snh">
+                                <rect key="frame" x="0.0" y="88" width="375" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUx-uO-w6A">
-                                <rect key="frame" x="0.0" y="718" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="732" width="375" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="okg-cz-ris">
                                         <rect key="frame" x="10" y="10" width="295" height="40"/>
@@ -255,7 +255,7 @@
                             <constraint firstItem="34D-c4-Wmu" firstAttribute="trailing" secondItem="nUx-uO-w6A" secondAttribute="trailing" id="10C-oI-0i1"/>
                             <constraint firstItem="GAZ-9S-Snh" firstAttribute="top" secondItem="34D-c4-Wmu" secondAttribute="top" id="7zP-7X-E6P"/>
                             <constraint firstItem="GAZ-9S-Snh" firstAttribute="leading" secondItem="34D-c4-Wmu" secondAttribute="leading" id="Dvy-lc-wMe"/>
-                            <constraint firstItem="34D-c4-Wmu" firstAttribute="bottom" secondItem="nUx-uO-w6A" secondAttribute="bottom" id="Idi-Ma-fCH"/>
+                            <constraint firstAttribute="bottom" secondItem="nUx-uO-w6A" secondAttribute="bottom" constant="20" id="Idi-Ma-fCH"/>
                             <constraint firstItem="34D-c4-Wmu" firstAttribute="trailing" secondItem="GAZ-9S-Snh" secondAttribute="trailing" id="TR4-AS-9AV"/>
                             <constraint firstItem="nUx-uO-w6A" firstAttribute="leading" secondItem="34D-c4-Wmu" secondAttribute="leading" id="UCz-Ui-xvM"/>
                             <constraint firstItem="nUx-uO-w6A" firstAttribute="top" secondItem="GAZ-9S-Snh" secondAttribute="bottom" id="wsK-YN-wcZ"/>

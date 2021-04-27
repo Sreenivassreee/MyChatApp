@@ -13,13 +13,17 @@ class ChatViewController:UIViewController{
     let firebaseAuth = Auth.auth()
     var messages:[Message]=[]
     let db=Firestore.firestore()
+    @IBOutlet weak var messBody: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
+        
         navigationItem.hidesBackButton=true
         navigationItem.title=C.AppName
         tableView.dataSource=self
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: C.cellId)
-        
+        getMess()
     }
     @IBAction func logoutPresed(_ sender: Any) {
         do {
@@ -29,8 +33,29 @@ class ChatViewController:UIViewController{
             print ("Error signing out: %@", signOutError)
         }
     }
-    @IBOutlet weak var messBody: UITextField!
- 
+    
+    func getMess(){
+  
+        db.collection(C.firebase.collection).order(by: C.firebase.time).addSnapshotListener{ (snap, error) in
+            self.messages=[]
+            if let s=snap{
+                for i in s.documents{
+                    let d=i.data()
+                    if let sender=d[C.firebase.messageSender] as? String, let body = d[C.firebase.messageBody] as? String {
+                        let new = Message(sender:sender, messagebody:body)
+                        self.messages.append(new)
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    
     @IBAction func sendPressed(_ sender: Any) {
         if let user=firebaseAuth.currentUser?.email,let mess=messBody.text{
             let timestamp = NSDate().timeIntervalSince1970
@@ -42,6 +67,8 @@ class ChatViewController:UIViewController{
                     print(e)
                 }else{
                     print("Succefully Added")
+                    self.messBody.text=""
+                    
                 }
                 
             }
