@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyChatApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-9Q-zYa">
-                                <rect key="frame" x="84.333333333333329" y="382" width="206.66666666666669" height="48"/>
+                                <rect key="frame" x="84.333333333333329" y="338" width="206.66666666666669" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-sP-d8Y">
-                                <rect key="frame" x="10" y="683" width="355" height="40"/>
+                                <rect key="frame" x="10" y="595" width="355" height="40"/>
                                 <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dHW-VK-Dhb"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWy-pd-jdb">
-                                <rect key="frame" x="10" y="728" width="355" height="40"/>
+                                <rect key="frame" x="10" y="640" width="355" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vhB-eC-LeF"/>
@@ -77,11 +77,11 @@
             <objects>
                 <viewController id="cUg-1K-8Uw" customClass="RegisterViewController" customModule="MyChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yc1-pt-xdv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="eJP-Cw-rJx">
-                                <rect key="frame" x="20" y="238" width="335" height="40"/>
+                                <rect key="frame" x="20" y="150" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="I2k-cu-mt8"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="c1D-UJ-fdN"/>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@b.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="1fX-le-1E4">
-                                <rect key="frame" x="20" y="178" width="335" height="40"/>
+                                <rect key="frame" x="20" y="90" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ATc-RZ-SAn"/>
                                     <constraint firstAttribute="height" constant="40" id="Q0d-u1-IOQ"/>
@@ -99,7 +99,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btA-fx-zeQ">
-                                <rect key="frame" x="30" y="288" width="315" height="40"/>
+                                <rect key="frame" x="30" y="200" width="315" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="QSO-s2-CRv"/>
@@ -143,11 +143,11 @@
             <objects>
                 <viewController id="gYh-0U-0Mc" customClass="LoginViewController" customModule="MyChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VL2-En-k2T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ab@b.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="dF8-hv-hnJ">
-                                <rect key="frame" x="20" y="178" width="335" height="40"/>
+                                <rect key="frame" x="20" y="90" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="H0w-8F-ltp"/>
                                 </constraints>
@@ -155,7 +155,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="QIv-wx-0Rb">
-                                <rect key="frame" x="20" y="237" width="335" height="40"/>
+                                <rect key="frame" x="20" y="149" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="grB-Td-0Y3"/>
                                 </constraints>
@@ -163,7 +163,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYp-3K-dgu">
-                                <rect key="frame" x="40" y="290" width="295" height="40"/>
+                                <rect key="frame" x="40" y="202" width="295" height="40"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ugz-dd-iPP"/>
@@ -201,20 +201,20 @@
             </objects>
             <point key="canvasLocation" x="2170" y="-556"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--MyChatApp😍-->
         <scene sceneID="zdU-9v-4Z0">
             <objects>
                 <viewController id="NVP-dp-Ssj" customClass="ChatViewController" customModule="MyChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="93D-yV-UtA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-9S-Snh">
-                                <rect key="frame" x="0.0" y="88" width="375" height="644"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUx-uO-w6A">
-                                <rect key="frame" x="0.0" y="732" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="644" width="375" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" background="textfield" disabledBackground="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="okg-cz-ris">
                                         <rect key="frame" x="10" y="10" width="295" height="40"/>
@@ -261,7 +261,7 @@
                             <constraint firstItem="nUx-uO-w6A" firstAttribute="top" secondItem="GAZ-9S-Snh" secondAttribute="bottom" id="wsK-YN-wcZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZK5-u0-Hvj">
+                    <navigationItem key="navigationItem" title="MyChatApp😍" id="ZK5-u0-Hvj">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="x0x-82-NbE">
                             <connections>
                                 <action selector="logoutPresed:" destination="NVP-dp-Ssj" id="4Vf-1q-7sm"/>
@@ -282,9 +282,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YNZ-Qd-SGk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MOz-C3-EMf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MOz-C3-EMf">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

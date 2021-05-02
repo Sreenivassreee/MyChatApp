@@ -46,6 +46,8 @@ class ChatViewController:UIViewController{
                         self.messages.append(new)
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
+                            let index=IndexPath(row: self.messages.count-1, section: 0)
+                            self.tableView.scrollToRow(at: index, at: .top, animated: false)
                         }
                     }
                 }
@@ -58,20 +60,28 @@ class ChatViewController:UIViewController{
     
     @IBAction func sendPressed(_ sender: Any) {
         if let user=firebaseAuth.currentUser?.email,let mess=messBody.text{
-            let timestamp = NSDate().timeIntervalSince1970
-            db.collection(C.firebase.collection).addDocument(data: [C.firebase.messageBody:mess,
-                                                                    C.firebase.messageSender:user,
-                                                                    C.firebase.time:timestamp
-            ]) { (error) in
-                if let e = error{
-                    print(e)
-                }else{
-                    print("Succefully Added")
-                    self.messBody.text=""
+            if !(mess == ""){
+                let timestamp = NSDate().timeIntervalSince1970
+                db.collection(C.firebase.collection).addDocument(data: [C.firebase.messageBody:mess,
+                                                                        C.firebase.messageSender:user,
+                                                                        C.firebase.time:timestamp
+                ]) { (error) in
+                    if let e = error{
+                        print(e)
+                    }else{
+                        print("Succefully Added")
+                        
+                        DispatchQueue.main.async {
+                            self.messBody.text=""
+                        }
+                        
+                    }
                     
                 }
-                
+            }else{
+                print("Message is Empty")
             }
+         
         }
     }
 }
@@ -82,8 +92,23 @@ extension ChatViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message=messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: C.cellId,for: indexPath) as! MessageCell
-        cell.messageLable?.text=messages[indexPath.row].messagebody
+        cell.messageLable?.text = message.messagebody
+        
+        
+        if message.sender==Auth.auth().currentUser?.email{
+            cell.leftImageView.isHidden=true
+            cell.rightImageView.isHidden=false
+            cell.messageBubol.backgroundColor=#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            cell.messageLable.textColor=#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }else{
+            cell.leftImageView.isHidden=false
+            cell.rightImageView.isHidden=true
+            cell.messageBubol.backgroundColor=#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.messageLable.textColor=#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }
+   
         return cell
         
     }
